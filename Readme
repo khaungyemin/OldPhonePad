@@ -1,0 +1,45 @@
+Old Phone Pad Converter
+This C# program translates old phone keypad button presses to letters.
+
+Features:
+
+Supports digits 2-9, corresponding to their respective letters (e.g., "2" for "ABC", "7" for "PQRS").
+Handles repeated digits (configurable behavior).
+Includes backspace (*) for removing the last character.
+Supports end symbol (#) to terminate input.
+Handles spaces for separating words.
+Error Handling:
+Ignores digits 0 and 1 (not present in the standard phone keypad).
+You can customize error handling (e.g., replace with a symbol or throw an exception).
+How to Use:
+
+Clone or download the repository.
+Open the solution in Visual Studio or your preferred C# IDE.
+Run the program (OldPhonePadConverter) to see the default behavior.
+Modify the input string in the Main method to test different scenarios.
+Example Usage:
+
+Input: 33# (repeated digit)
+Output: E (default: shows only the first press for repeated digits)
+
+Input: 227*#
+Output: B
+
+Input: 44 33 555 555 666#
+Output: Hello
+
+Input: 1a2b#
+Output: E (ignores 1 and 'a')
+
+Input: 0#
+Output: (empty string - ignores 0)
+Customization:
+
+You can modify the code to change how repeated digits are handled (show all presses, replace with a symbol).
+Further Enhancements (Optional):
+
+Implement validation for invalid characters beyond digits, backspace, end symbol, and space.
+Add unit tests to ensure code correctness.
+License:
+
+[Insert your preferred license information here, e.g., MIT License]
